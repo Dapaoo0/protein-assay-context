@@ -1,0 +1,176 @@
+{
+  "code_version": "task5-fix1",
+  "inputs": {
+    "cohort": {
+      "path": "D:/protein_assay_work/processed/paired_phenotype_cohort.csv",
+      "sha256": "fe0ceefec09c5bf87d494eceb825491a153047dffb9523e5c61bfa8ae78bc4cd"
+    },
+    "atlas": {
+      "path": "D:\\protein_assay_work\\release_artifacts\\assay_atlas.csv",
+      "sha256": "ef9c6911323ceb3f9116dd62c6062bdffff451942801fd30afbd48e8707da75e"
+    },
+    "task4_oof": {
+      "path": "D:\\protein_assay_work\\release_artifacts\\task4_oof_predictions.csv",
+      "sha256": "6d0838b07c058c26169b53b9293617595d035ee1917957100a41b4d83694d58c"
+    },
+    "task4_lopo": {
+      "path": "D:\\protein_assay_work\\release_artifacts\\task4_lopo_predictions.csv",
+      "sha256": "7f72ff3239d0e1d8bf2a8c10dfa1a4b80befb7de2ff56517ab4cba81468fe286"
+    },
+    "task4_permutation_summary": {
+      "path": "results/metadata/task4_observed_permutation_summary.csv",
+      "sha256": "4dfadf3bec541beb4b2477daf96be6f5ed828e4e116e900ee6ab0d491b228c16"
+    },
+    "label_counts": {
+      "path": "results/metadata/task2_counts.csv",
+      "sha256": "bf1ab13184695088d254181cf6cb204ab9b0781efe2c13646bd3bf492ac251b7"
+    }
+  },
+  "structures": [
+    {
+      "structure_id": "1R9O",
+      "chain": "A",
+      "official_url": "https://files.rcsb.org/download/1R9O.pdb",
+      "metadata_url": "https://data.rcsb.org/rest/v1/core/entry/1R9O",
+      "retrieved_at": "2026-09-05T12:46:35.535330+00:00",
+      "sha256": "16860aca35da55e576db41e3ff6a69227b41f771ba5ff4691d1d61eeef10e136",
+      "experimental_method": "X-RAY DIFFRACTION",
+      "resolution_angstrom": 2.0,
+      "protein": "CYP2C9",
+      "reference_sequence_hash": "3f891626b6684fc43355f4146b0d0aad6273d9d39670b42340a49cff79fa8d24",
+      "mapping_identity": 0.9977924944812362,
+      "mapping_coverage": 0.9244897959183673,
+      "sequence_mapping_rule": "global Needleman-Wunsch; identity >=0.95 and reference coverage >=0.65",
+      "functional_site_source": "UniProtKB/Swiss-Prot P11712 binding-site feature (entry version frozen at retrieval)",
+      "functional_site_positions": [
+        435
+      ],
+      "independent_annotation": {
+        "accession": "P11712",
+        "official_url": "https://rest.uniprot.org/uniprotkb/P11712.txt",
+        "retrieved_at": "2026-09-05T12:49:27.005646+00:00",
+        "sha256": "04225b238d8651585744c51ef485bf68776794b5c950c8496e6597f12766b9cb",
+        "entry_version": "252",
+        "site_features": [
+          "FT   BINDING         435"
+        ]
+      },
+      "confidence_rule": "experimental atom B-factor mean; pLDDT is NaN"
+    },
+    {
+      "structure_id": "1D5R",
+      "chain": "A",
+      "official_url": "https://files.rcsb.org/download/1D5R.pdb",
+      "metadata_url": "https://data.rcsb.org/rest/v1/core/entry/1D5R",
+      "retrieved_at": "2026-09-05T12:46:54.147257+00:00",
+      "sha256": "efd284b66f0f66d6c78c42aebe743c2095165878c097eff1eddee1f57653914c",
+      "experimental_method": "X-RAY DIFFRACTION",
+      "resolution_angstrom": 2.1,
+      "protein": "PTEN",
+      "reference_sequence_hash": "2675a6cc946076d70342977845afe793269c5987a998382100bede64d1e61b42",
+      "mapping_identity": 1.0,
+      "mapping_coverage": 0.7617866004962779,
+      "sequence_mapping_rule": "global Needleman-Wunsch; identity >=0.95 and reference coverage >=0.65",
+      "functional_site_source": "UniProtKB/Swiss-Prot P60484 active-site feature (entry version frozen at retrieval)",
+      "functional_site_positions": [
+        124
+      ],
+      "independent_annotation": {
+        "accession": "P60484",
+        "official_url": "https://rest.uniprot.org/uniprotkb/P60484.txt",
+        "retrieved_at": "2026-09-05T12:49:45.681725+00:00",
+        "sha256": "e0f06e38d1d104d40bba113d5d1d6d904c5f51d68ff4fdca2701f263505d4c75",
+        "entry_version": "226",
+        "site_features": [
+          "FT   ACT_SITE        124"
+        ]
+      },
+      "confidence_rule": "experimental atom B-factor mean; pLDDT is NaN"
+    }
+  ],
+  "outputs": {
+    "D:\\protein_assay_work\\release_artifacts\\task5_structure_mapping.csv": {
+      "sha256": "cc7f7971f92ce2a399d0a7b3b23ce4c344606c1e33af20c6673f7ff49805b914",
+      "rows": 893
+    },
+    "D:\\protein_assay_work\\release_artifacts\\task5_oof_predictions.csv": {
+      "sha256": "321fcf105df8a0abf2589aa9c8b9352c7940583140afc3f5fa06f70ba68967f3",
+      "rows": 4110
+    },
+    "D:\\protein_assay_work\\release_artifacts\\task5_lopo_predictions.csv": {
+      "sha256": "4af31e5cb7f4aab6d085e2324888c37a3936e734d8f7028514620ecaee05f417",
+      "rows": 4110
+    },
+    "D:\\protein_assay_work\\release_artifacts\\task5_complete_case_oof_predictions.csv": {
+      "sha256": "06d2cbe576a525e9eeb0d21465414911d208925ab84e09eb281905e95a511500",
+      "rows": 2952
+    },
+    "results\\metadata\\task5_paired_bootstrap_summary.csv": {
+      "sha256": "56e9daa1fdc9a5471bdee1064f5cd24e65add9c908896686583e173de9649c51",
+      "rows": 24
+    },
+    "results\\metadata\\task5_sensitivity_results.csv": {
+      "sha256": "c1a2e8fea8d7e1ba47c36b55f2f7f5f94ddc18e621be98071b5116acbce22955",
+      "rows": 34
+    },
+    "results\\metadata\\task5_case_studies.csv": {
+      "sha256": "0ed40a27f2f9cf9e9878cd77c44055efd00aff60968265a30cf64c16c5c9fa4a",
+      "rows": 3
+    },
+    "results\\figures\\figure5_generalization.png": {
+      "sha256": "2f5832dfdd2b976b62759e18549fb706777044f069136b688f1bbc2c4a559b53",
+      "rows": null
+    },
+    "results\\figures\\figure6_structure_error_map.png": {
+      "sha256": "2eac90654f7d9e1bc31d1e3c45edb1506b3fab015bbdfba0e39d876e14a09b2b",
+      "rows": null
+    }
+  },
+  "function_sensitivity_source": {
+    "path": "D:\\protein_assay_work\\processed\\function_sensitivity_scores.csv",
+    "sha256": "3be0cc1eec7ef6b3da5da9289c22e1170758eaeaa773692741b554b83888be4b",
+    "hash_validated": true,
+    "rows": 45338
+  },
+  "function_sensitivity_metrics": {
+    "path": "results\\metadata\\task5_function_score_sensitivity.csv",
+    "sha256": "f884db19768c58b9ecdf51de4b0b00f79a07e156657d20489e3a541aab695c9f",
+    "rows": 4
+  },
+  "paired_bootstrap": {
+    "path": "D:/protein_assay_work/processed/task5_paired_bootstrap_draws.csv",
+    "sha256": "0130ea4f56cbfa840c2d275e68dfdd388a2837dd6bb5c2fa892d0718dce08fd9",
+    "rows": 24000,
+    "seed": 2026,
+    "draws_per_protein_setting": 2000,
+    "cohort_rule": "exact common canonical protein/variant/position IDs; one shared residue-position draw per protein and setting"
+  },
+  "sensitivity_evidence": {
+    "canonical_path": "results\\metadata\\task5_sensitivity_results.csv",
+    "sha256": "c1a2e8fea8d7e1ba47c36b55f2f7f5f94ddc18e621be98071b5116acbce22955",
+    "required_controls": [
+      "function_score_source",
+      "label_confidence",
+      "model_coverage",
+      "opposite_or_no_improvement",
+      "permuted_labels",
+      "proximity_4A",
+      "proximity_5A",
+      "proximity_8A",
+      "structure_missingness",
+      "study_system",
+      "threshold_alternatives"
+    ],
+    "legacy_alias": {
+      "path": "results\\metadata\\task5_sensitivity.csv",
+      "sha256": "c1a2e8fea8d7e1ba47c36b55f2f7f5f94ddc18e621be98071b5116acbce22955",
+      "role": "backward-compatible byte-for-byte alias; canonical evidence is task5_sensitivity_results.csv"
+    }
+  },
+  "primary_proteins": [
+    "CYP2C9",
+    "PTEN"
+  ],
+  "proximity_rule": "minimum heavy-atom distance <=5 \u00c5 descriptive; 4/8 \u00c5 sensitivity",
+  "case_rule": "deterministically selected post-analysis using a recorded rule; Task 4 B2 OOF false-negative lowest probability; true-positive highest probability; uncertain abundance-preserved/function-uncertain closest to within-protein median ESM1v score; NOT_AVAILABLE is retained when no primary OOF row exists"
+}

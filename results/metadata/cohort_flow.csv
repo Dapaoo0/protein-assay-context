@@ -1,0 +1,33 @@
+protein,stage,count,funnel
+CYP2C9,abundance assay input,6370,primary
+CYP2C9,function assay input,6142,primary
+CYP2C9,sequence-compatible missense,4421,primary
+CYP2C9,QC-mapped paired rows,4421,primary
+CYP2C9,endpoint labeled,694,primary
+CYP2C9,primary benchmark eligible,694,primary
+CYP2C9,ESM1v covered (primary),694,primary
+CYP2C9,both models covered (primary),694,primary
+GCK,abundance assay input,8396,descriptive-only (no primary benchmark rows)
+GCK,function assay input,8570,descriptive-only (no primary benchmark rows)
+GCK,sequence-compatible missense,8255,descriptive-only (no primary benchmark rows)
+GCK,QC-mapped paired rows,8255,descriptive-only (no primary benchmark rows)
+GCK,endpoint labeled,505,descriptive-only (no primary benchmark rows)
+GCK,primary benchmark eligible,0,descriptive-only (no primary benchmark rows)
+GCK,ESM1v covered (primary),0,descriptive-only (no primary benchmark rows)
+GCK,both models covered (primary),0,descriptive-only (no primary benchmark rows)
+PTEN,abundance assay input,5083,primary
+PTEN,function assay input,7260,primary
+PTEN,sequence-compatible missense,4839,primary
+PTEN,QC-mapped paired rows,4839,primary
+PTEN,endpoint labeled,1361,primary
+PTEN,primary benchmark eligible,1361,primary
+PTEN,ESM1v covered (primary),1361,primary
+PTEN,both models covered (primary),1361,primary
+VKORC1,abundance assay input,2695,descriptive-only (no primary benchmark rows)
+VKORC1,function assay input,697,descriptive-only (no primary benchmark rows)
+VKORC1,sequence-compatible missense,692,descriptive-only (no primary benchmark rows)
+VKORC1,QC-mapped paired rows,692,descriptive-only (no primary benchmark rows)
+VKORC1,endpoint labeled,182,descriptive-only (no primary benchmark rows)
+VKORC1,primary benchmark eligible,0,descriptive-only (no primary benchmark rows)
+VKORC1,ESM1v covered (primary),0,descriptive-only (no primary benchmark rows)
+VKORC1,both models covered (primary),0,descriptive-only (no primary benchmark rows)

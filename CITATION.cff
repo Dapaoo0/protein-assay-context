@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "Protein Assay Context"
+message: "If you use the code or compact results, please cite this repository. Upstream assay data retain their original terms and are not relicensed here."
+type: software
+authors:
+  - family-names: "Protein Assay Context contributors"
+    given-names: ""
+    affiliation: ""
+version: 0.1.0
+date-released: 2026-09-05
+license: MIT

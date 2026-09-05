@@ -1,0 +1,17 @@
+protein,source,cohort,model,matched,total,coverage_fraction,gate_b
+CYP2C9,function_sensitivity,all_paired,ESM1v_single,4421,4421,1.0,PASS
+CYP2C9,function_sensitivity,all_paired,ESM2_650M,4421,4421,1.0,PASS
+CYP2C9,function_sensitivity,primary_eligible,ESM1v_single,694,694,1.0,PASS
+CYP2C9,function_sensitivity,primary_eligible,ESM2_650M,694,694,1.0,PASS
+GCK,function_sensitivity,all_paired,ESM1v_single,8255,8255,1.0,PASS
+GCK,function_sensitivity,all_paired,ESM2_650M,8255,8255,1.0,PASS
+GCK,function_sensitivity,primary_eligible,ESM1v_single,0,0,0.0,NOT_APPLICABLE
+GCK,function_sensitivity,primary_eligible,ESM2_650M,0,0,0.0,NOT_APPLICABLE
+PTEN,function_sensitivity,all_paired,ESM1v_single,4839,4839,1.0,PASS
+PTEN,function_sensitivity,all_paired,ESM2_650M,4839,4839,1.0,PASS
+PTEN,function_sensitivity,primary_eligible,ESM1v_single,1361,1361,1.0,PASS
+PTEN,function_sensitivity,primary_eligible,ESM2_650M,1361,1361,1.0,PASS
+VKORC1,function_sensitivity,all_paired,ESM1v_single,692,692,1.0,PASS
+VKORC1,function_sensitivity,all_paired,ESM2_650M,692,692,1.0,PASS
+VKORC1,function_sensitivity,primary_eligible,ESM1v_single,0,0,0.0,NOT_APPLICABLE
+VKORC1,function_sensitivity,primary_eligible,ESM2_650M,0,0,0.0,NOT_APPLICABLE

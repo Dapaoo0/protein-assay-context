@@ -1,0 +1,5 @@
+protein,abundance_input,function_input,abundance_invalid_or_non_missense,function_invalid_or_non_missense,abundance_valid_missense,function_valid_missense,shared_proteingym_pairs,author_source_input,author_source_valid_missense,author_invalid_or_non_missense,author_adapter_excluded,author_annotated_pairs,primary_eligible
+CYP2C9,6370,6142,0,0,6370,6142,4421,8701,8091,610,0,4421,694
+PTEN,5083,7260,0,0,5083,7260,4839,17100,15296,1804,0,4839,1361
+GCK,8396,8570,0,0,8396,8570,8255,18563,16966,1597,833,8255,0
+VKORC1,2695,697,0,0,2695,697,692,2918,2700,218,0,692,0

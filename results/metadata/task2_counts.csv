@@ -1,0 +1,5 @@
+protein,paired_missense,abundance_preserved,function_impaired_in_abundance_preserved,function_preserved_in_abundance_preserved,function_uncertain_in_abundance_preserved,function_other_in_abundance_preserved,impaired_positions,preserved_positions,gate_a
+CYP2C9,4421,1244,412,282,453,97,191,145,PASS
+PTEN,4839,1545,212,1149,160,24,101,270,PASS
+GCK,8255,1871,460,45,1164,202,149,41,REDUCE_SCOPE
+VKORC1,692,232,4,178,39,11,4,90,REDUCE_SCOPE

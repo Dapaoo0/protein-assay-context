@@ -1,0 +1,17 @@
+protein,cohort,model,matched,total,coverage_fraction,gate_b
+CYP2C9,all_paired,ESM1v_single,4421,4421,1.0,PASS
+CYP2C9,all_paired,ESM2_650M,4421,4421,1.0,PASS
+CYP2C9,primary_eligible,ESM1v_single,694,694,1.0,PASS
+CYP2C9,primary_eligible,ESM2_650M,694,694,1.0,PASS
+GCK,all_paired,ESM1v_single,8255,8255,1.0,PASS
+GCK,all_paired,ESM2_650M,8255,8255,1.0,PASS
+GCK,primary_eligible,ESM1v_single,0,0,0.0,NOT_APPLICABLE
+GCK,primary_eligible,ESM2_650M,0,0,0.0,NOT_APPLICABLE
+PTEN,all_paired,ESM1v_single,4839,4839,1.0,PASS
+PTEN,all_paired,ESM2_650M,4839,4839,1.0,PASS
+PTEN,primary_eligible,ESM1v_single,1361,1361,1.0,PASS
+PTEN,primary_eligible,ESM2_650M,1361,1361,1.0,PASS
+VKORC1,all_paired,ESM1v_single,692,692,1.0,PASS
+VKORC1,all_paired,ESM2_650M,692,692,1.0,PASS
+VKORC1,primary_eligible,ESM1v_single,0,0,0.0,NOT_APPLICABLE
+VKORC1,primary_eligible,ESM2_650M,0,0,0.0,NOT_APPLICABLE

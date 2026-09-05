@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+dist/
+*.py[cod]
+
+# Raw downloads and caches stay on D: and are not versioned.
+data/raw/
+data/cache/
+*.zip
+*.tar.gz
+*.parquet
+
+# Row-level source-derived outputs are generated locally on D: and excluded
+# from the public tree. See D:/protein_assay_work/release_artifacts/manifest.json.
+/results/metadata/assay_atlas.csv
+/results/metadata/task2_audit_sample.csv
+/results/metadata/task4_oof_predictions.csv
+/results/metadata/task4_lopo_predictions.csv
+/results/metadata/task5_case_studies.csv
+/results/metadata/task5_oof_predictions.csv
+/results/metadata/task5_lopo_predictions.csv
+/results/metadata/task5_complete_case_oof_predictions.csv
+/results/metadata/task5_structure_mapping.csv
+
+# Local secrets and editor state.
+.env
+.env.*
+.vscode/

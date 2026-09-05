@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Python 3.11
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.8.x"
+          enable-cache: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install locked dependencies
+        run: uv sync --frozen --dev
+      - name: Run offline tests
+        env:
+          UV_OFFLINE: "1"
+        run: uv run --offline python -m pytest -q
+      - name: Lint
+        env:
+          UV_OFFLINE: "1"
+        run: uv run --offline python -m ruff check src tests scripts
+      - name: Build package
+        env:
+          UV_OFFLINE: "1"
+        run: uv build

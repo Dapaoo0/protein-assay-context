@@ -1,0 +1,9 @@
+protein,model,groups_checked,exact_match_count,nonidentical_count,abundance_only_count,function_only_count
+CYP2C9,ESM1v_single,4421,4421,0,1949,1721
+CYP2C9,ESM2_650M,4421,131,4290,1949,1721
+GCK,ESM1v_single,8255,8255,0,141,315
+GCK,ESM2_650M,8255,290,7965,141,315
+PTEN,ESM1v_single,4839,4839,0,244,2421
+PTEN,ESM2_650M,4839,173,4666,244,2421
+VKORC1,ESM1v_single,692,38,654,2003,5
+VKORC1,ESM2_650M,692,692,0,2003,5

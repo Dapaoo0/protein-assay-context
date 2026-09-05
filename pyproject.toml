@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "protein-assay-context"
+version = "0.1.0"
+description = "Leakage-controlled benchmarking of variant-effect scores on abundance-preserved functional loss"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "matplotlib>=3.8,<4",
+    "pandas>=2.2,<3",
+    "PyYAML>=6.0,<7",
+    "scikit-learn>=1.5,<2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0,<9",
+    "ruff>=0.6,<1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.superpowers",
+    "/results/metadata/assay_atlas.csv",
+    "/results/metadata/task2_audit_sample.csv",
+    "/results/metadata/task4_oof_predictions.csv",
+    "/results/metadata/task4_lopo_predictions.csv",
+    "/results/metadata/task5_case_studies.csv",
+    "/results/metadata/task5_oof_predictions.csv",
+    "/results/metadata/task5_lopo_predictions.csv",
+    "/results/metadata/task5_complete_case_oof_predictions.csv",
+    "/results/metadata/task5_structure_mapping.csv",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/assay_context"]

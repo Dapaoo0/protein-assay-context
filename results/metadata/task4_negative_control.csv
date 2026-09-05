@@ -1,0 +1,2 @@
+n_variants,n_positives,n_negatives,positives,negatives,prevalence,ap,ap_prevalence,ap_lift,auroc,valid,control,seed,n,tolerance,near_prevalence
+10000.0,2037.0,7963.0,2037.0,7963.0,0.2037,0.20181259713774355,0.9907343993016375,0.9907343993016375,0.5007736135542445,True,large synthetic permutation/no-signal,2026,10000,0.05,True

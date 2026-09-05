@@ -1,0 +1,185 @@
+freeze_date: '2026-09-05'
+task: Task 2 paired phenotype cohort
+primary_endpoint: function-impaired versus function-preserved among abundance-preserved
+  variants
+proteins:
+- CYP2C9
+- GCK
+- PTEN
+- VKORC1
+assays:
+  CYP2C9:
+    abundance: CP2C9_HUMAN_Amorosi_2021_abundance
+    function: CP2C9_HUMAN_Amorosi_2021_activity
+  PTEN:
+    abundance: PTEN_HUMAN_Matreyek_2021
+    function: PTEN_HUMAN_Mighell_2018
+  GCK:
+    abundance: HXK4_HUMAN_Gersing_2023_abundance
+    function: HXK4_HUMAN_Gersing_2022_activity
+  VKORC1:
+    abundance: VKOR1_HUMAN_Chiasson_2020_abundance
+    function: VKOR1_HUMAN_Chiasson_2020_activity
+author_sources:
+  CYP2C9_activity_abundance_scores.csv: 283883889947e47c47b08f2f096feaf7ad5dd49d0f79432b8675c10150b61124
+  PTEN_Composite_abundance_data.tsv: e8172400de12c53043556f3d0b07e44e5a23c21582b14f3bc8f6d3dad9c0fe6c
+  PTEN_Mighell_phosphatase.csv: 6d0bc5e0f6a50f59ca272a19b5756107a089473d2d8e54a706e204da27601ecd
+  GCK_abundance.csv: 75fdeece9cc1c1a35a417956b1e9d5c62c39fe0a4a7c91a364bc43111c837dc7
+  GCK_activity.csv: f7efb1d51dd380fcd275c56da70592634b945579bbdf3acc065ffe226c19e7cd
+  VKOR_combined.csv: ea4bf42a40f1a7965667eca37318b2f17fc34ae8174f656939d5626e56523a8b
+thresholds:
+  CYP2C9:
+    abundance_preserved: abundance_class == wt-like
+    abundance_low: abundance_class in {decreased,nonsense-like}
+    function_impaired: activity_class in {decreased,nonsense-like}
+    uncertainty: possibly_*, increased, or missing; author point-estimate class
+  PTEN:
+    abundance_preserved: abundance_class == wt-like
+    function_impaired: High_conf == True and Cum_score <= -1.11
+    function_preserved: High_conf == True and -1.11 < Cum_score <= 0.89
+  GCK:
+    confidence_interval: score +/- t(0.975, df) * SE
+    abundance_threshold: 0.6
+    function_loss_threshold: 0.66
+    function_hyperactivity_threshold: 1.18
+    equality: uncertain
+  VKORC1:
+    abundance_preserved: abundance_class == wt-like
+    function_impaired: activity_class == low
+    uncertainty: possible/high/missing are not preserved
+excluded: non-missense and invalid reference rows are retained in attrition counts,
+  not cohort
+audit_seed: 2026
+gate_a_minimums:
+  paired_missense: 300
+  total_positions: 50
+  variants_per_class: 50
+  positions_per_class: 10
+primary_benchmark_requires: gate_a == PASS and endpoint_labeled == true
+model_evaluation:
+  gate_b: PASS
+  primary_contrast: ESM1v_single_vs_ESM2_650M
+  coverage_table: results/metadata/score_coverage.csv
+  direction_rule: ProteinGym zero-shot score columns are native fitness orientation;
+    impairment score is negative raw score
+  production_score_source: For each protein, the abundance-assay ProteinGym file is
+    the canonical production source; the paired function-assay file is audit-only
+    and a Task 5 sensitivity source.
+  cross_assay_audit_rule: exact numeric comparison; non-identical values are reported
+    as upstream cross-assay numerical discrepancies and are not coalesced
+  function_sensitivity_source: D:\protein_assay_work\processed\function_sensitivity_scores.csv
+score_archive:
+  url: https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/zero_shot_substitutions_scores.zip
+  path: D:\protein_assay_work\downloads\zero_shot_substitutions_scores.zip
+  content_length: 1911045703
+  size_bytes: 1911045703
+  sha256: 3fd7cdb5e78f1d43cabfabfeb6578c252b63af23ba2ab44db0094dc3a42de36d
+  downloaded_at: '2026-09-05T10:33:46.244517+00:00'
+  extracted_target_files:
+  - filename: CP2C9_HUMAN_Amorosi_2021_abundance.csv
+    protein: CYP2C9
+    role: abundance
+    rows: 6370
+    sha256: 1c25cab39f80e2667ec327136cae39fce9f555fab78d531590f383f72ec175d8
+  - filename: HXK4_HUMAN_Gersing_2023_abundance.csv
+    protein: GCK
+    role: abundance
+    rows: 8396
+    sha256: e8cd75e22ad820a6cf055a12c2146f4c6964f635332be4189226aa3e4a8068cd
+  - filename: PTEN_HUMAN_Matreyek_2021.csv
+    protein: PTEN
+    role: abundance
+    rows: 5083
+    sha256: d1a3f2670ae9d111d5cfb59fb6c73589d60518a5f8572925c85fee418d45a153
+  - filename: VKOR1_HUMAN_Chiasson_2020_abundance.csv
+    protein: VKORC1
+    role: abundance
+    rows: 2695
+    sha256: 41463284d82daaffc9f72a92ba590f6f109393d03ced751e39e258f41359f86c
+  - filename: CP2C9_HUMAN_Amorosi_2021_activity.csv
+    protein: CYP2C9
+    role: function
+    rows: 6142
+    sha256: 93694e2de761d8706f6f34b6ee050c18d78f0f8e8b94dd5a2032f844ed76f395
+  - filename: HXK4_HUMAN_Gersing_2022_activity.csv
+    protein: GCK
+    role: function
+    rows: 8570
+    sha256: edc780db0518e1469d811bed4eb649ac59f637b664be4ced7c18bec730698fd4
+  - filename: PTEN_HUMAN_Mighell_2018.csv
+    protein: PTEN
+    role: function
+    rows: 7260
+    sha256: a951c5a25e7fd067ae0ca16ddaca4873153aeb71efb46f93b3a7eaab3813a822
+  - filename: VKOR1_HUMAN_Chiasson_2020_activity.csv
+    protein: VKORC1
+    role: function
+    rows: 697
+    sha256: e3321284ad655f2db3b7350674b1066c721e8979ee0c4c0d15416174fc37b0ab
+  cross_assay_discrepancy_detail:
+    path: D:\protein_assay_work\processed\score_consistency_detail.csv
+    rows: 17575
+    sha256: 906bdab451d1d2e67fd8c51c28c9c644254beef5e4bdad383904d4bfe9637da0
+    rule: exact numeric comparison; non-identical values are upstream cross-assay
+      numerical discrepancies
+  function_sensitivity_source:
+    path: D:\protein_assay_work\processed\function_sensitivity_scores.csv
+    rows: 45338
+    sha256: 3be0cc1eec7ef6b3da5da9289c22e1170758eaeaa773692741b554b83888be4b
+frozen_models:
+  ESM1v_single:
+    column: ESM1v_single
+    higher_is_impaired: false
+    source: ProteinGym v1.3 zero-shot score column
+  ESM2_650M:
+    column: ESM2_650M
+    higher_is_impaired: false
+    source: ProteinGym v1.3 zero-shot score column
+structure_evaluation:
+  primary_proteins:
+  - CYP2C9
+  - PTEN
+  selection_rule: experimental structure selected before model-error inspection; fallback
+    is official AlphaFold DB only if mapping gates fail
+  mapping_gates:
+    chain_identity_minimum: 0.95
+    reference_coverage_minimum: 0.65
+  structures:
+    CYP2C9:
+      pdb_id: 1R9O
+      chain: A
+      official_url: https://files.rcsb.org/download/1R9O.pdb
+      metadata_url: https://data.rcsb.org/rest/v1/core/entry/1R9O
+      uniprot_accession: P11712
+      site_annotation_url: https://rest.uniprot.org/uniprotkb/P11712.txt
+      site_annotation_entry_version: 252
+      functional_positions:
+      - 435
+    PTEN:
+      pdb_id: 1D5R
+      chain: A
+      official_url: https://files.rcsb.org/download/1D5R.pdb
+      metadata_url: https://data.rcsb.org/rest/v1/core/entry/1D5R
+      uniprot_accession: P60484
+      site_annotation_url: https://rest.uniprot.org/uniprotkb/P60484.txt
+      site_annotation_entry_version: 226
+      functional_positions:
+      - 124
+  feature_rules:
+    accessibility: relative SASA by deterministic Shrake-Rupley sphere and Tien-2013
+      maximum ASA scale
+    secondary_structure: PDB HELIX/SHEET records; unassigned mapped residues are coil
+    contacts: any heavy-atom distance <= 8 Angstrom; exclude same and sequence-adjacent
+      residues
+    site_distance: minimum heavy-atom distance to independently annotated mapped functional
+      residues
+    proximity_descriptive_angstrom: 5
+    proximity_sensitivity_angstrom:
+    - 4
+    - 8
+    confidence_experimental: mean atom B-factor; pLDDT remains NaN
+    confidence_alphafold: atom pLDDT; never interpreted as stability
+  case_rule: deterministically selected post-analysis using a recorded rule; Task
+    4 B2 OOF false-negative lowest probability; true-positive highest probability;
+    uncertain abundance-preserved/function-uncertain closest to within-protein median
+    ESM1v score

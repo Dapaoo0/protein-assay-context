@@ -1,0 +1,36 @@
+{
+  "freeze_date": "2026-09-05",
+  "release_version": "v0.1",
+  "primary_endpoint": "function-impaired versus function-preserved among abundance-preserved variants",
+  "primary_proteins": [
+    "CYP2C9",
+    "PTEN"
+  ],
+  "primary_cohort": {
+    "n_variants": 2055,
+    "n_measured_residue_positions": 550,
+    "by_protein": {
+      "CYP2C9": {"n_variants": 694, "n_measured_residue_positions": 262},
+      "PTEN": {"n_variants": 1361, "n_measured_residue_positions": 288}
+    }
+  },
+  "models": [
+    "ESM1v_single",
+    "ESM2_650M"
+  ],
+  "seed": 2026,
+  "confidence_interval": "95% position bootstrap over measured residue positions; 2000 draws",
+  "secondary_endpoints": {
+    "spearman_score_function": "deferred",
+    "grouped_oof_isotonic_residual": "deferred"
+  },
+  "post_analysis_amendment": {
+    "date": "2026-09-05",
+    "status": "deferred",
+    "deferred_endpoints": [
+      "Spearman score/function",
+      "grouped-OOF isotonic residual"
+    ],
+    "rationale": "The primary binary benchmark and release audit were completed first; no secondary inference is claimed in v0.1."
+  }
+}

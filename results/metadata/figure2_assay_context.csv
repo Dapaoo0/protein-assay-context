@@ -1,0 +1,5 @@
+protein,abundance_assay_id,abundance_readout,function_assay_id,function_readout,numeric_threshold_note
+CYP2C9,CP2C9_HUMAN_Amorosi_2021_abundance,protein abundance,CP2C9_HUMAN_Amorosi_2021_activity,"activity, binding (to fluorescent CYP probe)",categorical author classes; no single numeric threshold
+PTEN,PTEN_HUMAN_Matreyek_2021,Protein abundance (FACS sorting for abundance of GFP-fused target),PTEN_HUMAN_Mighell_2018,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",categorical author classes; no single numeric threshold
+GCK,HXK4_HUMAN_Gersing_2023_abundance,abundance,HXK4_HUMAN_Gersing_2022_activity,functional complementation to reduced growth on glucose medium,abundance 0.60; function loss 0.66; hyperactivity 1.18
+VKORC1,VKOR1_HUMAN_Chiasson_2020_abundance,protein abundance (eGFP fusion reporter),VKOR1_HUMAN_Chiasson_2020_activity,carboxylation activity (carboxylation reporter on cell surface),categorical author classes; no single numeric threshold

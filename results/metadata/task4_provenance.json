@@ -1,0 +1,66 @@
+{
+  "code_version": "task4-fix1",
+  "input_sha256": {
+    "cohort": "fe0ceefec09c5bf87d494eceb825491a153047dffb9523e5c61bfa8ae78bc4cd",
+    "atlas": "ef9c6911323ceb3f9116dd62c6062bdffff451942801fd30afbd48e8707da75e"
+  },
+  "seed": 2026,
+  "bootstrap_draws": 2000,
+  "permutation_draws": 2000,
+  "primary_proteins": [
+    "CYP2C9",
+    "PTEN"
+  ],
+  "primary_endpoint": "primary_eligible=True; function-impaired versus function-preserved",
+  "score_direction": "frozen ProteinGym impairment-oriented scores; higher means more impaired",
+  "split_settings": {
+    "within": "outer 5-fold grouped-position CV with 3-fold grouped-position inner selection (fallback outer 3 when required)",
+    "leave_one_protein_out": "two PASS proteins only; inner grouped-position CV within single training protein"
+  },
+  "outputs": {
+    "results\\metadata\\task4_results.csv": {
+      "sha256": "8e90ef3957c1e2e00857f76af51b9e151b09fcb69f98d12f054f5df0a537e93c",
+      "rows": 16
+    },
+    "results\\metadata\\task4_primary_metrics.csv": {
+      "sha256": "f20754791238a5c5004520db129488827c075eac9db9ce6993b407a947444bf0",
+      "rows": 6
+    },
+    "results\\metadata\\task4_bootstrap_summary.csv": {
+      "sha256": "de1201532c37471b23db620b222211f0b313582fbe5dba8df05399b0f5bf4720",
+      "rows": 6
+    },
+    "results\\metadata\\task4_observed_permutation_summary.csv": {
+      "sha256": "4dfadf3bec541beb4b2477daf96be6f5ed828e4e116e900ee6ab0d491b228c16",
+      "rows": 4
+    },
+    "D:\\protein_assay_work\\release_artifacts\\task4_oof_predictions.csv": {
+      "sha256": "6d0838b07c058c26169b53b9293617595d035ee1917957100a41b4d83694d58c",
+      "rows": 6165
+    },
+    "D:\\protein_assay_work\\release_artifacts\\task4_lopo_predictions.csv": {
+      "sha256": "7f72ff3239d0e1d8bf2a8c10dfa1a4b80befb7de2ff56517ab4cba81468fe286",
+      "rows": 6165
+    },
+    "results\\metadata\\task4_negative_control.csv": {
+      "sha256": "339faff779426fdd128788a1526d71939bb91ea7d91bdea906f688893d1b00d9",
+      "rows": 1
+    },
+    "results\\figures\\figure4_predictor_forest.png": {
+      "sha256": "614a7078110b93165864eaee52b6322ff85df704ecafe951712987c1828b8a99",
+      "rows": null
+    }
+  },
+  "external_draws": {
+    "bootstrap": {
+      "path": "D:/protein_assay_work/processed/task4_bootstrap_draws.csv",
+      "sha256": "fec173f488d0091eefa47a4b2dac4303eb88789c17d77ad6ba025c399cbf9dcb",
+      "rows": 8000
+    },
+    "observed_permutation": {
+      "path": "D:/protein_assay_work/processed/task4_observed_permutation_draws.csv",
+      "sha256": "fda5485f12a0db3b6c65acb5b2aa65d672c59e3236f6c22b93a16454f5f13f18",
+      "rows": 8000
+    }
+  }
+}

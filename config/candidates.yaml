@@ -1,0 +1,113 @@
+source:
+  name: ProteinGym DMS substitutions reference metadata
+  url: https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv
+  downloaded_at: '2026-09-05'
+  sha256: a8f498011532a74aa9fe556a50555a75e928c5837d19c06a87592ae04049b308
+  revision: 144fe22b07dfaeec2b366f2346203a9838a55b4c
+  archive_url: https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip
+  archive_sha256: 3a83766254ac9ac9984ec25cb73c6e010ea4418f5e35f143933e6b6e6473b921
+  archive_version: v1.3
+
+pairs:
+  CYP2C9:
+    abundance: CP2C9_HUMAN_Amorosi_2021_abundance
+    function: CP2C9_HUMAN_Amorosi_2021_activity
+  PTEN:
+    abundance: PTEN_HUMAN_Matreyek_2021
+    function: PTEN_HUMAN_Mighell_2018
+  GCK:
+    abundance: HXK4_HUMAN_Gersing_2023_abundance
+    function: HXK4_HUMAN_Gersing_2022_activity
+  VKORC1:
+    abundance: VKOR1_HUMAN_Chiasson_2020_abundance
+    function: VKOR1_HUMAN_Chiasson_2020_activity
+
+assays:
+  CP2C9_HUMAN_Amorosi_2021_abundance:
+    role: abundance
+    assay_url: https://doi.org/10.1016/j.ajhg.2021.07.001
+    construct: full-length CYP2C9 with a C-terminal eGFP fusion and IRES-mCherry control
+    host_system: HEK293T Bxb1 landing-pad cells
+    tags: [C-terminal eGFP, IRES-mCherry]
+    normalization: author-normalized VAMP-seq score; synonymous-like near 1 and nonsense-like near 0
+    controls: synonymous, nonsense, wild-type, and individually validated variants
+    qc_rule: use ProteinGym single-substitution rows; preserve original score uncertainty separately when available
+    threshold_source: author controls and uncertainty; numeric classification rule deferred to the phenotype freeze
+    license: source article and data terms; redistribution must be reviewed before release
+  CP2C9_HUMAN_Amorosi_2021_activity:
+    role: function
+    assay_url: https://doi.org/10.1016/j.ajhg.2021.07.001
+    construct: full-length CYP2C9 assayed by click-seq with an activity-based fluorescent probe
+    host_system: engineered Saccharomyces cerevisiae
+    tags: [activity-based probe, click chemistry]
+    normalization: author-normalized click-seq score; synonymous-like near 1 and nonsense-like near 0
+    controls: synonymous, nonsense, wild-type, and known star-allele variants
+    qc_rule: use ProteinGym single-substitution rows; preserve original score uncertainty separately when available
+    threshold_source: author controls and uncertainty; ProteinGym median cutoff is not a biological threshold
+    license: source article and data terms; redistribution must be reviewed before release
+  PTEN_HUMAN_Matreyek_2021:
+    role: abundance
+    assay_url: https://doi.org/10.1186/s13073-021-00984-x
+    construct: full-length PTEN fused to eGFP with an internal expression control
+    host_system: HEK293-derived human cells
+    tags: [PTEN-eGFP, VAMP-seq]
+    normalization: author-normalized cellular abundance score
+    controls: synonymous, nonsense, wild-type, and individually characterized variants
+    qc_rule: use ProteinGym single-substitution rows and document the 2021 score revision
+    threshold_source: author abundance classes and uncertainty; ProteinGym median cutoff is not a biological threshold
+    license: source article and data terms; redistribution must be reviewed before release
+  PTEN_HUMAN_Mighell_2018:
+    role: function
+    assay_url: https://doi.org/10.1016/j.ajhg.2018.03.018
+    construct: full-length human PTEN co-expressed with human PI3K catalytic subunit p110
+    host_system: YPH-499 Saccharomyces cerevisiae growth complementation
+    tags: [humanized yeast, PI3K toxicity rescue]
+    normalization: author-reported fitness score relative to synonymous and truncation-like controls
+    controls: synonymous, truncation-like, wild-type, and catalytically inactive variants
+    qc_rule: use ProteinGym single-substitution rows and retain author confidence classes when recovered
+    threshold_source: author-defined wild-type-like, hypomorphic, and truncation-like score ranges
+    license: source article and data terms; redistribution must be reviewed before release
+  HXK4_HUMAN_Gersing_2023_abundance:
+    role: abundance
+    assay_url: https://doi.org/10.1186/s13059-024-03238-2
+    construct: full-length human GCK fused to a DHFR protein-complementation fragment
+    host_system: Saccharomyces cerevisiae abundance-PCA
+    tags: [DHFR-PCA, methotrexate selection]
+    normalization: author-normalized abundance score with low-abundance reference variants
+    controls: wild-type, known low-abundance variants, DMSO growth, and methotrexate selection
+    qc_rule: use ProteinGym single-substitution rows and author quality filters
+    threshold_source: author manual abundance cutoff of 0.6, subject to Task 2 uncertainty audit
+    license: source article and data terms; redistribution must be reviewed before release
+  HXK4_HUMAN_Gersing_2022_activity:
+    role: function
+    assay_url: https://doi.org/10.1186/s13059-023-02935-6
+    construct: full-length pancreatic human GCK expressed in a triple hexokinase-deletion strain
+    host_system: Saccharomyces cerevisiae glucose-growth complementation
+    tags: [hxk1 deletion, hxk2 deletion, glk1 deletion]
+    normalization: author-calibrated activity score supporting hypoactive and hyperactive effects
+    controls: vector, wild-type, catalytically dead, hypoactive, and hyperactive variants
+    qc_rule: use ProteinGym single-substitution rows and author quality filters
+    threshold_source: author clinical/control calibration; ProteinGym median cutoff is not a biological threshold
+    license: source article and data terms; redistribution must be reviewed before release
+  VKOR1_HUMAN_Chiasson_2020_abundance:
+    role: abundance
+    assay_url: https://doi.org/10.7554/eLife.58026
+    construct: full-length VKORC1 with an N-terminal eGFP fusion and IRES-mCherry control
+    host_system: HEK293T Bxb1 landing-pad cells
+    tags: [N-terminal eGFP, IRES-mCherry, VAMP-seq]
+    normalization: author-normalized abundance score; wild-type-like near 1 and total loss near 0
+    controls: wild-type, R98W, TMD1 deletion, replicate sorts, and individually validated variants
+    qc_rule: use ProteinGym single-substitution rows; recover author confidence intervals for labeling
+    threshold_source: author controls and confidence intervals; ProteinGym median cutoff is not a biological threshold
+    license: CC BY 4.0 article and source data; verify upstream table terms before redistribution
+  VKOR1_HUMAN_Chiasson_2020_activity:
+    role: function
+    assay_url: https://doi.org/10.7554/eLife.58026
+    construct: full-length VKORC1 with a cell-surface Factor IX carboxylation reporter
+    host_system: HEK293 reporter cells lacking endogenous VKORC1 and VKORC1L1
+    tags: [gamma-carboxylation reporter, antibody binding]
+    normalization: author-normalized activity score from six replicate sorts
+    controls: wild-type, endogenous double knockout, replicate sorts, and known active-site variants
+    qc_rule: use ProteinGym single-substitution rows; recover author confidence intervals for labeling
+    threshold_source: author activity cutoff of 0.7 with confidence intervals, subject to Task 2 audit
+    license: CC BY 4.0 article and source data; verify upstream table terms before redistribution
