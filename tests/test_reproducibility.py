@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import subprocess
 import tarfile
 from pathlib import Path
@@ -196,3 +197,21 @@ def test_case_docs_and_config_use_post_analysis_selection_wording() -> None:
     freeze_text = (root / "config/analysis_freeze.yaml").read_text(encoding="utf-8")
     assert "case_rule: deterministically selected post-analysis using a recorded rule" in freeze_text
     assert "deterministically selected post-analysis using a recorded rule" in case_text
+
+
+def test_readme_is_a_visual_structured_scientific_summary() -> None:
+    root = Path(__file__).resolve().parents[1]
+    readme = (root / "README.md").read_text(encoding="utf-8")
+
+    for label in ("**Background.**", "**Methods.**", "**Results.**", "**Interpretation.**"):
+        assert label in readme
+    for figure in (
+        "figure1_cohort_flow.png",
+        "figure4_predictor_forest.png",
+        "figure5_generalization.png",
+    ):
+        assert re.search(rf"!\[[^\]]+\]\(results/figures/{re.escape(figure)}\)", readme)
+    assert "2,055" in readme
+    assert "550" in readme
+    assert "0.838" in readme
+    assert "0.559" in readme
